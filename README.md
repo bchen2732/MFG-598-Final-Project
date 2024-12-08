@@ -1,5 +1,8 @@
 # Configurator for Motor and Gerabox Combinations for Pivot Doors
 
+### Benjamin Chen 
+Submitted to MFG 598 
+
 ## **Overview**
 This project completed as a final project for MFG 598 is built using python. 
 This program allows users to use a graphical user interface to calculate the required torque for a piovt door based on the user-provided door specifications. 
