@@ -43,7 +43,7 @@ The option to also add in new iterations of motors or gearboxes into the existin
 ---
 
 ## **Requirements**
-- Python 3.x
+- Python 3
 - Required Libraries:
   - `pandas`
   - `tkinter`
