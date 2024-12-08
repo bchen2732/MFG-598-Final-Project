@@ -1,8 +1,8 @@
 # Configurator for Motor and Gerabox Combinations for Pivot Doors
 
-Benjamin Chen
-MFG 598 
-Final Project
+- Benjamin Chen
+- MFG 598 
+- Final Project
 
 ## **Overview**
 This project completed as a final project for MFG 598 is built using python. 
