@@ -47,8 +47,7 @@ The option to also add in new iterations of motors or gearboxes into the existin
 - Required Libraries:
   - `pandas`
   - `tkinter`
-  - `openpyxl`
 
 Install these libraries using:
 ```bash
-pip install pandas openpyxl
+pip install pandas tkinter
