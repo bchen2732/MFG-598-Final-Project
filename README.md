@@ -1,4 +1,4 @@
-# Configurator for Motor and Gerabox Combinations for Pivot Doors
+# Configurator for Motor and Gearbox Combinations for Pivot Doors
 
 - Benjamin Chen
 - MFG 598 
