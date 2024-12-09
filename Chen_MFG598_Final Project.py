@@ -46,14 +46,14 @@ def calculate_torque():
             # Calculate wind pressure
             wind_pressure = 0.5 * air_density * (wind_speed ** 2)
 
-            # We are asuming that the wind is direclty acting on the face of the door. This means that one side of the door from the pivot will have a pushing force assiting the motor, while the other side is acting against the motor. A picture explaining this calculation can be found in the github
+            # We are asuming that the wind is direclty acting on the face of the door. This means that one side of the door from the pivot will have a pushing force assiting the motor, while the other side is acting against the motor. A picture explaining this calculation can be found in the github listed as "Wind Load Calculations"
             door_area_1 = height * distance_to_pivot
             door_area_2 = height * (abs(distance_to_pivot-width))
 
             wind_force_1 = wind_pressure * door_area_1 # Wind force acting at center on first section of the door
             wind_force_2 = wind_pressure * door_area_2 # Wind force acting at center on the second section of the door
 
-            torque_wind = ((abs(distance_to_pivot-width)/2) * wind_force_2) - ((distance_to_pivot/2) * wind_force_1)  # Subtracting the torques since they are acting against each other
+            torque_wind = ((abs(distance_to_pivot-width)/2) * wind_force_2) - ((distance_to_pivot/2) * wind_force_1)  # Subtracting the torques since they are acting against each other. The torques are both acting at the pivot location. 
 
         # Total torque is calcculated by the sum of torque of the door and wind load
         total_torque = torque_door + torque_wind
@@ -103,7 +103,7 @@ def find_motor_gearbox():
 
     for line in torque_text.split("\n"):
         if "- Total (With 10% Safety Factor):" in line:
-            required_torque = float(line.split(":")[1].strip().split()[0])
+            required_torque = float(line.split(":")[1].strip().split()[0]) # Pulling the required torque from the output
              
 
     # Pulling all the data with in the given spreadsheet and converting them in to numerical values to be used for calcuations
@@ -286,16 +286,16 @@ def show_buttons():
     tk.Label(root, text="Add New Items:").grid(row=8, column=0, columnspan=2, pady=10)
 
     add_motor_btn = tk.Button(root, text="Add Motor", command=lambda: add_item("Motor"))
-    add_motor_btn.grid(row=9, column=0, padx=10, pady=5)
+    add_motor_btn.grid(row=13, column=0, padx=10, pady=5)
 
     add_first_gearbox_btn = tk.Button(root, text="Add First Gearbox", command=lambda: add_item("First Gearbox"))
-    add_first_gearbox_btn.grid(row=9, column=1, padx=10, pady=5)
+    add_first_gearbox_btn.grid(row=13, column=1, padx=10, pady=5)
 
     add_second_gearbox_btn = tk.Button(root, text="Add Second Gearbox", command=lambda: add_item("Second Gearbox"))
-    add_second_gearbox_btn.grid(row=10, column=0, padx=10, pady=5)
+    add_second_gearbox_btn.grid(row=14, column=0, padx=10, pady=5)
 
     add_third_gearbox_btn = tk.Button(root, text="Add Third Gearbox", command=lambda: add_item("Third Gearbox"))
-    add_third_gearbox_btn.grid(row=10, column=1, padx=10, pady=5)
+    add_third_gearbox_btn.grid(row=14, column=1, padx=10, pady=5)
 
 # This function appends the added data into the existing exel sheet used for the program. This ensures that the data is always up to date. 
 def append_to_excel(section, data):
@@ -413,7 +413,7 @@ tk.Label(root, text="Air Density (kg/m³):").grid(row=6, column=0)
 air_density_entry = tk.Entry(root, state=tk.DISABLED)
 air_density_entry.grid(row=6, column=1)
 
-find_motor_btn = tk.Button(root, text="Find Motor/Gearbox", command=find_motor_gearbox)
+find_motor_btn = tk.Button(root, text="Find Motor/Gearbox Combination", command=find_motor_gearbox)
 find_motor_btn.grid(row=8, column=0, columnspan=2, pady=10)
 
 output_label = tk.Label(root, text="Output:", font=("Arial", 12, "bold"))
