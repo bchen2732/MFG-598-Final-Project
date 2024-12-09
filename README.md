@@ -27,6 +27,8 @@ A feature that was requested to be added from the sponsors was the ability to ad
   - Door weight (in kilograms).
   - Door dimensions (width and height in meters).
   - Pivot location from the edge of the door.
+  - Wind Speed
+  - Wind Pressure
 - Computes the required torque
 
 ---
