@@ -26,7 +26,7 @@ A feature that was requested to be added from the sponsors was the ability to ad
 - Accepts user input for:
   - Door weight (in kilograms).
   - Door dimensions (width and height in meters).
-  - Pivot location relative to the door's center.
+  - Pivot location from the edge of the door.
 - Computes the required torque
 
 ---
