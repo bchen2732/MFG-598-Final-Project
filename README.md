@@ -8,7 +8,7 @@
 This project completed as a final project for MFG 598 is built using python. 
 This program allows users to use a graphical user interface to calculate the required torque for a pivot door based on the user-provided door specifications. 
 The program then outputs the three best motor/gearbox combinations to provide that torque. 
-The option to also add in new iterations of motors or gearboxes into the existing data base is provided as well. 
+The option to also add in new iterations of motors or gearboxes into the existing data base is provided as well as saving the outputted combinations for later use. 
 ---
 
 ## **Methodology**
