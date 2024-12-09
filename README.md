@@ -46,7 +46,7 @@ A feature that was requested to be added from the sponsors was the ability to ad
 
 ### 4. **Results Management**
 - Displays results within the GUI.
-- Gives the user the option to save the output as a CSV file for later use:
+- Gives the user the option to save the output as a .xlsx file for later use:
   - Users can specify a file name and save location.
 
 ---
